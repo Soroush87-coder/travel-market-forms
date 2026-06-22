@@ -1,10 +1,8 @@
 # Travel Market Forms Portal
 
-Upload this repository to GitHub and deploy it on Vercel for `form.travelmarket.agency`.
+این نسخه اصلاح شده است:
 
-Included pages:
-- Portugal Golden Visa Fund EN/FA
-- Portugal Immigration & Tax EN/FA
-- Spain Immigration & Tax EN/FA
-
-The existing Google Apps Script URL is preserved in `script.js`, so email submissions continue to work without a new Gmail setup.
+- فرم‌های اصلی اسپانیا برگشته‌اند: `programs/spain-eligibility-assessment-en.html` و `programs/spain-eligibility-assessment-fa.html`
+- فایل‌های جدید DOCX به عنوان صفحه توضیحی/Guide اضافه شده‌اند، نه فرم قابل پرکردن.
+- اتصال Google Apps Script/Gmail همان اتصال قبلی است و فایل‌های `script.js` و `wizard.js` حفظ شده‌اند.
+- گزینه «بیوه» و دکمه آن از فرم فارسی حذف شده است.

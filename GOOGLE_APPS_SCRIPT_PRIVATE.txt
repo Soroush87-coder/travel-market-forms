@@ -1,0 +1,59 @@
+function doPost(e) {
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = ss.getSheetByName('Leads') || ss.getSheetByName('Sheet1') || ss.getSheets()[0];
+
+    var data = {};
+    if (e && e.postData && e.postData.contents) {
+      data = JSON.parse(e.postData.contents);
+    }
+
+    var fields = data.fields || {};
+    var files = data.files || [];
+
+    var headers = ['Date','Source','Page','URL','Name','WhatsApp','Email','Nationality','Program','Family','Notes','All Fields','Files'];
+    if (sheet.getLastRow() === 0) sheet.appendRow(headers);
+
+    var allFields = Object.keys(fields).map(function(k){ return k + ': ' + fields[k]; }).join('\n');
+    var fileList = files.map(function(f){ return f.name + ' (' + f.type + ', ' + f.size + ' bytes)'; }).join('\n');
+
+    sheet.appendRow([
+      new Date(),
+      data.source || 'Travel Market Website',
+      data.page || '',
+      data.url || '',
+      fields.name || fields.full_name || fields.fullName || '',
+      fields.whatsapp || fields.phone || fields.mobile || '',
+      fields.email || '',
+      fields.nationality || '',
+      fields.program || fields.visa_type || '',
+      fields.family || fields.family_members || '',
+      fields.notes || fields.message || '',
+      allFields,
+      fileList
+    ]);
+
+    MailApp.sendEmail({
+      to: 'dynamic.range87@gmail.com',
+      subject: 'New Travel Market Lead - ' + (data.page || 'Website Form'),
+      htmlBody: '<h2>New Lead Received</h2>' +
+        '<p><b>Page:</b> ' + escapeHtml(data.page || '') + '</p>' +
+        '<p><b>URL:</b> ' + escapeHtml(data.url || '') + '</p>' +
+        '<pre style="font-family:Arial;white-space:pre-wrap">' + escapeHtml(allFields) + '</pre>' +
+        (fileList ? '<h3>Uploaded files</h3><pre>' + escapeHtml(fileList) + '</pre>' : '')
+    });
+
+    return ContentService.createTextOutput(JSON.stringify({ success: true })).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ success: false, error: String(err) })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}

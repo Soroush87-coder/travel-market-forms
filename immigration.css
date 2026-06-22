@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap");
+
+.program-body{background:#f8f3ea;color:#14213d}.program-hero{padding:64px 6vw 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}.program-card,.program-panel,.directory-card{background:rgba(255,255,255,.82);border:1px solid rgba(20,33,61,.09);box-shadow:0 24px 70px rgba(20,33,61,.10);backdrop-filter:blur(20px);border-radius:34px}.program-card{padding:36px}.program-card h1{font-size:clamp(36px,5vw,66px);line-height:1;margin:12px 0 16px;letter-spacing:-.05em}.program-meta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.program-meta span{border-radius:999px;padding:10px 13px;background:#fff4df;color:#a95600;font-weight:900;font-size:13px}.program-panel{padding:26px;background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,248,234,.78))}.program-panel h2{font-size:24px;margin:0 0 16px}.program-panel ul{padding-left:20px;margin:0;display:grid;gap:12px}.program-panel li{line-height:1.55;color:#526176}.fa .program-panel ul{padding-left:0;padding-right:20px}.form-section{padding:22px 6vw 76px;display:grid;grid-template-columns:.72fr 1.28fr;gap:24px}.form-intro{padding:30px}.form-intro h2{font-size:34px;line-height:1.06;margin:0 0 14px;letter-spacing:-.04em}.lead-small{color:#526176;line-height:1.7}.smart-form{padding:26px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.smart-form input,.smart-form select,.smart-form textarea{width:100%;border:1px solid rgba(20,33,61,.1);border-radius:18px;background:#fff;color:#14213d;padding:15px 16px;outline:0;font:inherit}.smart-form textarea,.smart-form .wide{grid-column:1/-1}.smart-form textarea{min-height:120px}.file-note{grid-column:1/-1;font-size:12px;color:#64748b}.directory-hero{padding:70px 6vw 28px}.directory-hero h1{font-size:clamp(38px,6vw,76px);max-width:900px;line-height:.98;letter-spacing:-.06em;margin:12px 0}.directory-grid{padding:24px 6vw 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.directory-card{padding:24px;text-decoration:none;color:#14213d;transition:.25s ease;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}.directory-card:hover{transform:translateY(-6px)}.directory-card b{font-size:22px;line-height:1.15}.directory-card p{color:#526176;line-height:1.55}.mini-tag{width:max-content;border-radius:999px;padding:8px 11px;background:#eaf7f6;color:#07706d;font-size:12px;font-weight:900}.success-box{max-width:780px;margin:70px auto;padding:44px;text-align:center}.success-box h1{font-size:52px;letter-spacing:-.05em;margin:0 0 14px}.fa{direction:rtl}.fa .navbar,.fa footer{direction:ltr}.fa .program-card,.fa .program-panel,.fa .form-intro,.fa .smart-form{direction:rtl}.backlink{display:inline-flex;margin-top:18px;color:#14213d;font-weight:900;text-decoration:none}@media(max-width:980px){.program-hero,.form-section{grid-template-columns:1fr}.directory-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.program-hero,.form-section,.directory-hero,.directory-grid{padding-left:5vw;padding-right:5vw}.smart-form{grid-template-columns:1fr}.directory-grid{grid-template-columns:1fr}.program-card,.program-panel,.form-intro,.smart-form{padding:22px}}
+
+
+/* Privacy + Persian typography refinements */
+.program-body{font-family:"Vazirmatn",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.fa,.fa input,.fa select,.fa textarea,.fa button{font-family:"Vazirmatn",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.fa .program-card h1{font-size:clamp(30px,4.2vw,54px);letter-spacing:-.035em;line-height:1.18;font-weight:900}
+.fa .form-intro h2{font-size:clamp(26px,3.1vw,40px);line-height:1.25;letter-spacing:-.025em}
+.fa .lead,.fa .lead-small{font-size:clamp(15px,1.5vw,18px);line-height:2;font-weight:500}
+.fa .smart-form input,.fa .smart-form select,.fa .smart-form textarea{font-size:15px;line-height:1.7;font-weight:500}
+.fa .program-meta span,.fa .mini-tag{font-size:12px;font-weight:800}
+.secure-note{background:#f7fbfb;border:1px solid rgba(7,112,109,.12);border-radius:18px;padding:12px 14px;color:#42526a!important}
+@media(max-width:640px){.fa .program-card h1{font-size:32px}.fa .form-intro h2{font-size:28px}.fa .lead,.fa .lead-small{font-size:15px}}
+.form-status{grid-column:1/-1;margin-top:12px;padding:13px 15px;border-radius:16px;font-size:13px;line-height:1.8;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.78);color:#334155}
+.form-status.pending{background:rgba(255,247,237,.9);color:#9a3412;border-color:rgba(251,146,60,.3)}
+.form-status.success{background:rgba(240,253,244,.95);color:#166534;border-color:rgba(34,197,94,.28)}
+.form-status.error{background:rgba(254,242,242,.95);color:#991b1b;border-color:rgba(239,68,68,.28)}
+button[disabled],input[type="submit"][disabled]{opacity:.65;cursor:not-allowed}
+
+/* ===== Assessment form (Spain) — modern sectioned UI ===== */
+.assess-wrap{padding:22px 6vw 80px;max-width:1080px;margin:0 auto}
+.assess-form{display:block}
+.fblock{background:rgba(255,255,255,.82);border:1px solid rgba(20,33,61,.08);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 18px 50px rgba(20,33,61,.07);backdrop-filter:blur(18px)}
+.fblock-head{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.fblock-num{flex:0 0 auto;display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#ff9f43,#5ce1e6);color:#fff;font-weight:900;font-size:15px}
+.fblock-head h3{font-size:21px;margin:0;letter-spacing:-.02em}
+.subhead{font-weight:900;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#a95600;margin:18px 0 10px}
+.frow{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.field{display:flex;flex-direction:column}
+.field.wide{grid-column:1/-1}
+.field .txtlbl,.field .qlabel{font-size:13px;font-weight:700;color:#26334d;margin-bottom:8px}
+.assess-form input[type=text],.assess-form input[type=tel],.assess-form input[type=email],.assess-form input[type=number],.assess-form input[type=date],.assess-form textarea{width:100%;border:1px solid rgba(20,33,61,.12);border-radius:16px;background:#fff;color:#14213d;padding:14px 15px;outline:0;font:inherit;transition:.2s ease}
+.assess-form input:focus,.assess-form textarea:focus{border-color:#5ce1e6;box-shadow:0 0 0 4px rgba(92,225,230,.16)}
+.assess-form textarea{min-height:96px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;cursor:pointer;line-height:0}
+.opt input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+.opt span{display:inline-flex;align-items:center;gap:7px;padding:10px 15px;border-radius:999px;border:1px solid rgba(20,33,61,.14);background:#fff;color:#46566f;font-size:13.5px;font-weight:700;line-height:1;transition:.18s ease}
+.opt input:checked + span{background:linear-gradient(135deg,#fff1df,#eaf7f6);border-color:#37c9cf;color:#0c6b67;box-shadow:0 8px 20px rgba(92,225,230,.2)}
+.opt input:focus-visible + span{outline:2px solid #37c9cf;outline-offset:2px}
+.assess-actions{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.assess-actions .file-note{font-size:12px;color:#64748b}
+.assess-actions .file-note input{display:block;margin-top:8px}
+.assess-actions button{width:100%}
+.assess-note{font-size:12.5px;color:#64748b;text-align:center}
+/* covered-areas chips in hero panel */
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.areas span{border-radius:999px;padding:8px 12px;background:#fff;border:1px solid rgba(20,33,61,.1);color:#46566f;font-size:12.5px;font-weight:700}
+.lang-pill{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:7px 12px;background:#eaf7f6;color:#07706d;font-size:12px;font-weight:900}
+.directory-grid.two{grid-template-columns:repeat(2,1fr);max-width:840px;margin-left:auto;margin-right:auto}
+/* RTL */
+.fa .assess-form,.fa .fblock,.fa .field{direction:rtl}
+.fa .assess-form input,.fa .assess-form textarea{text-align:right}
+.fa .subhead{color:#a95600}
+@media(max-width:760px){.frow{grid-template-columns:1fr}.fblock{padding:22px}.directory-grid.two{grid-template-columns:1fr}}
+
+/* ===== Wizard (multi-step assessment) ===== */
+.wiz-progress{margin:2px 0 20px}
+.wiz-bar{height:8px;border-radius:999px;background:rgba(20,33,61,.08);overflow:hidden;direction:ltr}
+.wiz-bar i{display:block;height:100%;width:8%;border-radius:999px;background:linear-gradient(90deg,#ff9f43,#5ce1e6);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.wiz-meta{display:flex;justify-content:space-between;gap:12px;margin-top:11px;font-size:13px}
+.wiz-step{font-weight:900;color:#a95600}
+.wiz-title{color:#46566f;font-weight:800}
+.wiz-nav{display:flex;gap:12px;justify-content:space-between;margin-top:18px}
+.wiz-nav .btn{min-width:150px;justify-content:center}
+.assess-form.is-wizard .fblock{display:none}
+.assess-form.is-wizard .fblock.active{display:block;animation:wizfade .35s ease}
+@keyframes wizfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fa .wiz-meta,.fa .wiz-nav{flex-direction:row-reverse}
+.fa .wiz-bar{transform:scaleX(-1)}
+@media(max-width:760px){.wiz-nav .btn{min-width:0;flex:1}}
+
+.wiz-nav .btn[hidden]{display:none}
